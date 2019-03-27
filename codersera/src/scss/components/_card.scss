@@ -1,40 +1,81 @@
+.wrapper{
+
+}
+.flexBox{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 50rem;
+
+  width:80%;
+  margin: 0 auto;
+
+}
+
 .parent{
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid white;
-  width: 30%;
-  color: white;
-  background-color: rgba(255, 0, 0, 0.4);
+  border-radius: 1rem;
+  color: $color-six;
+  width: 16%;
+  background-color: $color-white;
   padding: .5rem;
+  vertical-align: center;
+
 }
 
 .img-container{
-
+  padding-top: 2%;
   img{
     border-radius: 50%;
-    height: 8rem;
-    width: 8rem;
+    height: 5rem;
+    width: 5rem;
 
   }
 }
 .text{
-  vertical-align: center;
-  margin-left: 1.2rem;
+  width: 70%;
+  margin-left: 1.5rem;
   margin-top: 1.2rem;
   &-title{
     font-family: 'roboto';
     font-size: 2rem;
-
-
   }
   &-description{
-    font-size: 1.5rem;
-
+    font-size: 1.4rem;
   }
 }
 
-.flexBox{
-  display: flex;
-  flex-wrap: wrap;
+
+
+@media (max-width: 480px) {
+
+  .parent{
+    text-align: center;
+    width: 60%;
+    .img-container{
+      text-align: center;
+      width: 100%;
+    }
+    .text{
+      width: 100%;
+    }
+
+
+  }
+}
+.item0,.item4{
+  margin-left: $card-padding+20rem;
+}
+
+.item1,.item3{
+  margin-left: $card-padding+10rem;
+}
+.item2{
+  margin-left: $card-padding;
+}
+
+.item7{
+  margin-right:$card-padding ;
 }
