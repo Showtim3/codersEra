@@ -1,0 +1,286 @@
+footer {
+  background-color:$color-footer-background;
+
+}
+
+.footer-container{
+   text-align: center;
+  }
+  .logos{
+    display: inline-block;
+    margin: 0 auto;
+    & i{
+      padding: 4rem;
+      font-size: 3.5rem;
+      color: $color-footer-text;
+
+    }
+  }
+
+  .second{
+    text-align: center;
+
+  }
+  .linksWrapper{
+
+    max-width: 120rem;
+    margin: 5rem auto 0 auto;
+  }
+
+
+  .links{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+
+    color: $color-white;
+
+    &-products{
+      display: inline-block;
+      width: 33%;
+    }
+    &-list{
+      display: inline-block;
+      width: 25%;
+      padding-left: 6rem;
+      text-align: left;
+    }
+
+    &-external{
+      width: 30%;
+      padding-left: 8rem;
+      text-align: left;
+      display: inline-block;
+
+    }
+  }
+  h4{
+    color: $color-footer-heading;
+    margin-bottom: 1rem;
+    span{
+      font-size: 1.8rem;
+
+    }
+  }
+  .itemTitle,.itemDescription{
+    color: $color-footer-text;
+
+  }
+  .itemTitle{
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-top: 10rem;
+
+  }
+  .itemDescription{
+    font-size: 1.5rem;
+  }
+
+  .linkItem,.listItem{
+    font-size: 1.5rem;
+    color: $color-footer-text;
+  }
+
+  .item-container {
+
+    div{
+      padding-top: 1.5rem;
+    }
+    div:first-child{
+      padding-top: 1rem;
+    }
+  }
+  .about-container, .link-container{
+
+    div:first-child{
+      padding-top: 0.2rem;
+    }
+  }
+
+  .listItem,.linkItem{
+    color: $color-footer-text;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    line-height: 2.3rem;
+
+  }
+
+  //copyright
+  .end-footer{
+    margin: 5rem auto 0 auto;
+    padding-bottom: 6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.29);
+    text-align: left;
+
+  }
+
+  .copyright{
+    margin-top: 2rem;
+    span{
+      font-size: 1.5rem;
+      color: $color-white;
+    }
+  }
+
+  .icons-bottom{
+    display: inline-block;
+    float: right;
+    span{
+      font-size: 1.5rem;
+      padding-right: 2rem;
+      color:$color-footer-text;
+
+    }
+  }
+  .icons{
+    display: inline-block;
+  }
+
+
+
+@media (max-width: 1170px) {
+    .links{
+      &-products{
+        padding-left: 5rem;
+      }
+      &-list{
+        padding-left: 5rem;
+      }
+      &-external{
+        padding-left: 3rem;
+      }
+    }
+  }
+@media (max-width: 1100px) {
+  .links{
+    &-products{
+      padding-left: 2rem;
+    }
+    &-list{
+      width: 25%;
+
+    }
+    &-external{
+      width: 25%;
+    }
+  }
+}
+@media (max-width: 870px) {
+  .links{
+    &-list{
+      padding-left: 3rem;
+    }
+    &-external{
+      padding-left: 6rem;
+    }
+  }
+}
+@media (max-width: 810px) {
+  .links{
+    &-products{
+      width: 30%;
+    }
+    &-list{
+      padding-left: 2rem;
+      width: 30%;
+    }
+    &-external{
+      padding-left: 2rem;
+      width: 30%;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .links{
+    &-products{
+      width: 30%;
+    }
+    &-list{
+      width: 30%;
+    }
+    &-external{
+      width: 30%;
+    }
+  }
+}
+@media (max-width: 670px) {
+  .links{
+    text-align: center;
+    padding-left: 1rem;
+    &-products{
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+    &-list{
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+    &-external{
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  }
+  h4 {
+    margin-top: 4rem;
+  }
+  .copyright{
+    text-align: center;
+    & span{
+    padding: 0.2rem;
+    &:first-child{
+      padding-top: 1rem;
+    }
+    }
+
+  }
+}
+
+
+
+
+
+@media (max-width: 890px) {
+  .logos{
+    & i{
+      padding: 1.2rem;
+
+    }
+  }
+}
+@media (max-width: 800px) {
+  .logos{
+    & i{
+      padding: 3rem;
+
+    }
+  }
+}
+
+@media (max-width:650px) {
+  .linksWrapper{
+    margin-top: 0;
+  }
+
+  .icons-bottom {
+    width: 100%;
+
+    span {
+      padding-right: 2rem;
+      color: $color-footer-text;
+    }
+  }
+  .icons-bottom{
+    padding-top: .5rem;
+  }
+  .icon-end{
+    padding-top: 1rem;
+  }
+
+}
+
+

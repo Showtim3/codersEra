@@ -1,0 +1,40 @@
+.parent{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid white;
+  width: 30%;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.4);
+  padding: .5rem;
+}
+
+.img-container{
+
+  img{
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+
+  }
+}
+.text{
+  vertical-align: center;
+  margin-left: 1.2rem;
+  margin-top: 1.2rem;
+  &-title{
+    font-family: 'roboto';
+    font-size: 2rem;
+
+
+  }
+  &-description{
+    font-size: 1.5rem;
+
+  }
+}
+
+.flexBox{
+  display: flex;
+  flex-wrap: wrap;
+}

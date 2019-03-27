@@ -1,0 +1,64 @@
+<footer>
+        <div class="footer-container">
+              <div class="logos">
+
+                <i class="fa fa-scissors"></i>
+                <i class="fa fa-desktop"></i>
+                <i class="fa fa-address-book"></i>
+                <i class="fa fa-calculator"></i>
+                <i class="fa fa-car"></i>
+
+              </div>
+
+
+          <div class="second">
+            <div class="linksWrapper">
+                    <div class="links">
+                      <div class="links-products">
+                        <h4><span class="heading">Products</span> </h4>
+                        <div class="item-container" >
+                          <div *ngFor="let item of products">
+                          <span class="itemTitle">{{item.name}}</span><br>
+                          <span class="itemDescription">{{item.description}}</span><br>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="links-list">
+                        <h4><span class="heading">About Us</span> </h4>
+                        <div class="about-container">
+                             <div *ngFor="let item of info">
+                          <span class="listItem">{{item}}</span>
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="links-external">
+                        <h4><span class="heading">Links</span> </h4>
+                        <div class="link-container">
+                          <div *ngFor="let item of links">
+                        <span class="linkItem">{{item}}<br></span>
+                        </div>
+                        </div>
+                      </div>
+                  </div>
+
+              <div class="end-footer">
+                <div class="copyright"><span>&copy; Copyright 2019 CodersERA</span>
+
+                  <div class="icons-bottom">
+
+                    <span>Privacy Policy</span>
+                    <span>Support</span>
+                    <span>Terms of Service</span>
+                    <div class="icons">
+                      <span><i class="fa fa-facebook icon-end"></i></span>
+                      <span><i class="fa fa-twitter icon-end"></i></span>
+                      <span><i class="fa fa-youtube icon-end"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+</footer>

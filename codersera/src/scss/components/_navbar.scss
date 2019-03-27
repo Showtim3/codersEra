@@ -1,0 +1,256 @@
+
+.nav-container{
+  padding: 1.4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index: 10;
+}
+
+.logoText{
+  display: inline-block;
+  padding-left: 3rem;
+}
+
+.title{
+  display: inline-block;
+
+  &-logo{
+    font-size: 2.6rem;
+    color: $color-white;
+  }
+
+  &-text{
+    display: inline-block;
+    font-size: 2.6rem;
+    color: $color-white;
+    padding-left: 1rem;
+}
+}
+
+
+
+.links{
+  display: block;
+
+  &-items{
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & ul{
+    list-style-type: none;
+
+  }
+
+  & li{
+    padding: 0.2rem 2rem 0 3rem;
+    font-size: 2rem;
+    color: $color-white;
+    text-transform: capitalize;
+      display: inline-block;
+
+
+    &:first-child{
+      padding-left: 10rem;
+    }
+    &:last-child{
+    text-align: right;
+
+    }
+  }
+}
+.btnContainer{
+  span{
+    text-align: right;
+  }
+  position: fixed;
+  right:2rem;
+
+}
+
+.applyAsCoder{
+  display: block;
+  position: fixed;
+  right:26rem;
+  text-align: right;
+  font-size: 2rem;
+  color: $color-white;
+  background-color: transparent;
+  border: 0;
+
+}
+.consultACoder{
+  text-align: right;
+  font-size: 2rem;
+  margin: 0 2rem;
+  color: $color-white;
+  background-color: transparent;
+  border: 0;
+
+}
+.btnColorHover{
+  position: fixed;
+  right:25rem;
+  top:0;
+  height: 5rem;
+  width: 16rem;
+  background-color: $color-btn-hover;
+}
+.btnColorHover2{
+  position: fixed;
+  right:5.2rem;
+  top:0;
+  height: 5rem;
+  width: 16rem;
+  background-color: $color-btn-hover;
+  z-index: -1;
+  &:hover{
+    background-color: white;
+    z-index: 10;
+  }
+}
+
+.btnColor1{
+  position: fixed;
+  right:25rem;
+  border-radius: 0.5rem;
+  top:0.8rem;
+  height: 4rem;
+  width: 16rem;
+  background-color: $color-btn-background;
+}
+
+.btnColor2{
+  border-radius: 0.5rem;
+  position: fixed;
+  right:3.5rem;
+  top:0.8rem;
+  height: 3.6rem;
+  width: 19rem;
+  border: 2px solid $color-white;
+  background-color:transparent;
+}
+
+
+
+
+
+.hamburger{
+  display: none;
+}
+
+
+@media (max-width:1300px){
+  .links{
+    & li{
+     padding: 0.2rem 1rem 0 1rem;
+      &:first-child{
+        padding-left: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .links {
+    display: none;
+    &-items{
+      display: none;
+    }
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    background-color: black;
+
+  }
+
+ .click, .box1, .box2, .box3 {
+    background-color: $color-white;
+    width: 3rem;
+    height: 0.3rem;
+    position: absolute;
+    right: 2rem;
+    margin-top: 0;
+
+  }
+  .click{
+    z-index: 20;
+    opacity: 0;
+    top: 0;
+    right: 1rem;
+    width:5rem;
+    height:5rem;;
+    background-color: black;
+  }
+  .box2 {
+    top: 2.5rem;
+  }
+  .box3 {
+    top: 3.5rem;
+  }
+
+  .box1-change{
+    background-color: $color-three;
+    transition: 0.3s ease;
+    width: 3.4rem;
+    transform: rotate(45deg) translateY(1.4rem);
+  }
+  .box2-change{
+    opacity: 0;
+  }
+  .box3-change{
+    transition: 0.3s ease;
+    background-color: $color-three;
+    width: 3.4rem;
+    transform: rotate(-45deg) translateY(-1.4rem);
+  }
+
+
+  .listHam{
+    position: absolute;
+    z-index: 2;
+    right: 2rem;
+    top:6rem;
+    display: none;
+    transition: 1s ease;
+    ul{
+
+      border: 1px solid black;
+    }
+    ul li{
+      transition: 0.3s ease-in;
+      list-style: none;
+      font-size: 2.5rem;
+      text-align: left;
+      padding: 1.5rem;
+      border-bottom: 1px solid black;
+      &:hover{
+        color: $color-white;
+        background-color: $color-eight;
+
+      }
+    }
+  }
+  .background{
+    background-color: rgba(255, 255, 255, 0.27);
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50%;
+    transition: 0.5s ease;
+    transform: translate(25%,-15%);
+    position: absolute;
+    top:0;
+    right:-4rem;
+    z-index: -5;
+  }
+  .hamMenu-change{
+    display: block;
+  }
+}
+
