@@ -3,11 +3,12 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-card',
   template: `
+    
     <div class="wrapper">
-      <div class="box1">
+      <div class="boxCard1">
         <div class="flexBox">
           <div class="parent item{{i}}" *ngFor="let item of first;let i = index">
-            <div class="img-container"><img [src]=item.link alt="images"></div>
+            <div class="img-container"><img [src]=item.imgLink alt="images"></div>
             <div class="text">
               <div class="text-title">{{item.name}}</div>
               <div class="text-description">{{item.description}}</div>
@@ -15,10 +16,10 @@ import {Component, Input, OnInit} from '@angular/core';
           </div>
         </div>
       </div>
-      <div class="box2">
+      <div class="boxCard2">
         <div class="flexBox">
-          <div class="parent item{{i}}" *ngFor="let item of second;let i = index">
-            <div class="img-container"><img [src]=item.link alt="images"></div>
+          <div class="parent2 item{{i+5}}" *ngFor="let item of second;let i = index">
+            <div class="img-container"><img [src]=item.imgLink alt="images"></div>
             <div class="text">
               <div class="text-title">{{item.name}}</div>
               <div class="text-description">{{item.description}}</div>
@@ -38,7 +39,7 @@ export class CardComponent implements OnInit {
 
   constructor() {
 
-    setTimeout(()=>this.addData(),1000);
+    setTimeout(()=>this.addData(),100);
 
   }
   addData(){

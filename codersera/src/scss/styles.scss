@@ -1,12 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+//@import "../materialize-src-v1.0.0/materialize-src/sass/materialize";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @import "base/base";
 @import "base/variables";
 @import "base/typography";
-
+@import "base/mixins";
 @import "components/navbar";
 @import "components/card";
 @import "components/header";
 @import "components/content1";
 @import "components/footer";
-
+@import "components/section-work";
+@import "components/signup-form";
+@import "components/contact-us";
+@import "components/projects";
+@import "base/animations";
+@import "components/sections-features";
 

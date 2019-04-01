@@ -1,12 +1,16 @@
+//
+//
+// https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=0277BD
 
-$color-one: #f6c4f8;
-$color-two: rgba(239, 150, 243, 0.63);
-$color-three: #ea78ef;
-$color-four: #e34aea;
-$color-five: #dc1ce5;
-$color-six: #ce19d7;
-$color-navbar-primary: #680d6c;
-$color-eight: rgb(60, 7, 63);
+$color-dark : #004c8c;
+$color-primary :  #0277bd;
+$color-light: #58a5f0;
+
+$color-background: #EEEEEE;
+
+
+
+
 $color-btn-background: #ff8e00;
 $color-white: white;
 $color-btn-hover: rgba(0, 0, 0, 0.36);
@@ -17,4 +21,5 @@ $color-footer-heading: #c1b6b5;
 
 
 $card-padding: 10rem;
-$gap-padding: 5 rem;
+$gap-padding: 5rem;
+$gap-padding-low : 1rem;

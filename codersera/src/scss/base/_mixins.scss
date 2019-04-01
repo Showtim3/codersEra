@@ -1,0 +1,19 @@
+@mixin card-entry-left{
+  animation-name: entry-left;
+  animation-duration: 2s;
+}
+
+@mixin card-entry-right{
+  animation-name: entry-right;
+  animation-duration: 2s;
+}
+
+
+@mixin navbarExternal{
+  height: 5.5rem;
+  background-color: $color-primary;
+  position: fixed;
+  top:0;
+  z-index: 100;
+  width: 100%;
+}

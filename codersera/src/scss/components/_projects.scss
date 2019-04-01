@@ -1,0 +1,132 @@
+.project-container{
+  background-color: $color-background;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+.navbar-projects{
+  @include navbarExternal();
+}
+.project-heading{
+  text-align: center;
+  span{
+    color: $color-primary;
+    font-size: 7rem;
+  }
+}
+
+.projects-flexBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6rem;
+}
+.project1,.project2,.project3{
+  background-size: cover;
+  &:hover{
+   transform: scale(1.06) ;
+    transition: 0.3s ;
+    backface-visibility: hidden;
+  }
+}
+.project1{
+  border-radius: 5px;
+  width: 30%;
+  height: 30rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(9, 9, 9, 0.65)),url("../assets/projects/first.jpg");
+}
+
+.project2{
+  margin-left: 3%;
+  background-color: blue;
+  width: 28%;
+  height: 32rem;
+  border-radius: 5px;
+  background-image: linear-gradient(to right,  rgba(0,0,0,0.65), rgba(0, 0, 0, 0.65)),url("../assets/projects/second.jpg");
+}
+
+.project3{
+ // background-color: green;
+  display: inline-block;
+  padding-top: 4rem;
+  margin-top: 2rem;
+  width: 62%;
+  border-radius: 5px;
+  height: 30rem;
+  background-image: linear-gradient(to right,  rgba(0,0,0,0.65), rgba(0, 0, 0, 0.65)),url("../assets/projects/third.jpg");
+}
+
+.project-title{
+  padding-top: 6rem;
+  vertical-align: center;
+  text-align: center;
+    span{
+      vertical-align: center;
+      text-align: center;
+      font-size: 2.5rem;
+      color: $color-white;
+      font-family: Roboto;
+
+    }
+}
+.project-description{
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+  text-align: center;
+  padding-top: 3.5rem;
+  span{
+    line-height: 1.5rem;
+    font-size: 1.4rem;
+    font-family: Roboto;
+    color: #d8d8d8;
+  }
+}
+.project-btn{
+  margin-top: 3rem;
+  text-align: center;
+
+ button{
+   cursor: pointer;
+   border: none;
+   color: $color-white;
+   padding: 1rem 3rem;
+   border-radius: 5px;
+   span{
+     font-size: 2rem;
+
+    }
+  }
+  i{
+    margin-right: 1rem;
+  }
+
+}
+.project-btn{
+
+  &-btn0{ background-color: red;}
+  &-btn1{ background-color: blue;}
+  &-btn2{ background-color: lawngreen;}
+
+}
+
+
+@media (max-width: 1300px){
+  .project1,.project2{
+    width: 45%;
+
+  }
+  .project2{
+    margin-left: .5rem;
+  }
+  .project3{
+    width: 90%;
+  }
+}
+
+@media (max-width: 850px) {
+  .project1,.project2,.project3{
+    width: 90%;
+    margin: 2rem 0 0;
+
+  }
+}

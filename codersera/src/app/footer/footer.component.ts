@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as faker from 'faker/locale/de_AT';
+import * as faker from 'faker';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -13,10 +13,12 @@ export class FooterComponent implements OnInit {
 
   constructor() {
 
-    this.products.push({name: "Codementor",description: "Find a mentor to help you in real time"});
-    this.products.push({name:"CodeMentorX",description:"Hire world-class freelance developers for your team"});
-    this.products.push({name:"Community",description:"Share insights, exchange ideas, and learn from fellow developers"});
 
+    this.products = [
+      {name: "CodersEra",description: "Find a mentor to help you in real time"},
+      {name:"CodersEraMentor",description:"Hire world-class freelance developers for your team"},
+      {name:"Community",description:"Share insights, exchange ideas, and learn from fellow developers"}
+    ];
     for(let i=0;i<6;i++)
     {this.info.push(faker.lorem.sentence(7));}
 

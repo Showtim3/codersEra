@@ -1,0 +1,16 @@
+<div class="navbar-projects"><app-navbar></app-navbar></div>
+<div class="project-container">
+  <div class="project-heading">
+    <span>Our Products</span>
+  </div>
+  <div class="projects-flexBox">
+    <div class="project{{i+1}}" [style.background-image]=project.bg *ngFor="let project of projectObj;let i = index">
+      <div class="project-title" ><span>{{project.title}}</span></div>
+      <div class="project-description"><span>{{project.description}}</span></div>
+      <div class="project-btn "><button class="project-btn-btn{{i}}"><span><i class="fa fa-bookmark"></i>Know More</span></button></div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

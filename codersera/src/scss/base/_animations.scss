@@ -1,0 +1,30 @@
+@Keyframes entry-left {
+0%{
+  opacity: 0;
+  transform: translateX(-15rem);
+  font-size: 10rem;
+}
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@Keyframes entry-right {
+  0%{
+    opacity: 0;
+    transform: translateX(15rem);
+
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@Keyframes opacity-change {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

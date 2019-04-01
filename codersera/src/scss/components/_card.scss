@@ -1,81 +1,141 @@
 .wrapper{
 
+display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+.boxCard1 , .boxCard2{
+  display: inline-block;
+}
+
 .flexBox{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  max-height: 50rem;
-
-  width:80%;
-  margin: 0 auto;
-
 }
 
-.parent{
-  margin-top: 1rem;
+.parent,.parent2{
+
   display: flex;
   flex-wrap: wrap;
-  border-radius: 1rem;
-  color: $color-six;
-  width: 16%;
-  background-color: $color-white;
-  padding: .5rem;
-  vertical-align: center;
+  border-radius: 0.5rem;
 
+  background-color: $color-white;
+  width: 27rem;
+
+  margin: 1.1rem 0 1.1rem auto;
+
+}
+.parent2{
+  margin: 1.1rem auto 1.1rem 0;
 }
 
 .img-container{
-  padding-top: 2%;
+  padding: 6% 2% 6% 2%;
+
   img{
     border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-
+    height: 4.8rem;
+    width: 4.8rem;
   }
 }
 .text{
-  width: 70%;
-  margin-left: 1.5rem;
-  margin-top: 1.2rem;
+
+  padding: 5% 2% 6% 2%;
   &-title{
+    padding-top: 2%;
     font-family: 'roboto';
-    font-size: 2rem;
+    font-size: 1.6rem;
+    color: black;
   }
   &-description{
+    padding-top: 4%;
     font-size: 1.4rem;
+    color: #666;
   }
 }
 
 
 
-@media (max-width: 480px) {
 
-  .parent{
-    text-align: center;
-    width: 60%;
-    .img-container{
-      text-align: center;
-      width: 100%;
-    }
-    .text{
-      width: 100%;
-    }
-
-
-  }
-}
 .item0,.item4{
-  margin-left: $card-padding+20rem;
+  margin-right: $gap-padding ;
+  @include card-entry-left();
 }
 
 .item1,.item3{
-  margin-left: $card-padding+10rem;
+  margin-right: $gap-padding *2 ;
+  @include card-entry-left();
+  animation-duration: 2.5s;
 }
 .item2{
-  margin-left: $card-padding;
+  margin-right: $gap-padding  * 3;
+  @include card-entry-left();
+  animation-duration: 3s;
+}
+
+.item5,.item9{
+  margin-left: $gap-padding;
+  @include card-entry-right();
+
+}
+.item6,.item8{
+  margin-left: $gap-padding*2;
+  @include card-entry-right();
+  animation-duration: 2.5s;
+
 }
 
 .item7{
-  margin-right:$card-padding ;
+  margin-left: $gap-padding * 3;
+  @include card-entry-right();
+  animation-duration: 3s;
+}
+
+
+
+@media (max-width: 750px) {
+  .item0,.item4{
+        margin-right: $gap-padding-low *3;
+      }
+
+      .item1,.item3{
+        margin-right: $gap-padding-low*5;
+
+      }
+      .item2{
+        margin-right: $gap-padding-low*10;
+      }
+
+      .item5,.item9{
+        margin-left: $gap-padding-low*3;
+      }
+      .item6,.item8{
+        margin-left: $gap-padding-low*5;
+      }
+
+      .item7{
+        margin-left: $gap-padding-low *10;
+      }
+}
+@media (max-width: 780px) {
+  .boxCard1,.boxCard2{
+    width: 100%;
+    display: inline;
+  }
+  .item0,.item1,.item2,.item3,.item4{
+    margin-right: 0;
+  }
+  .item5,.item6,.item7,.item8,.item9{
+    margin-left: 0;
+  }
+  .item0,.item2,.item4,.item6,item8{
+    @include card-entry-left();
+  }
+  .item1,.item3,.item5,.item7,item9{
+    @include card-entry-right();
+  }
+
 }

@@ -1,0 +1,57 @@
+<div class="navbar-contactUs"><app-navbar></app-navbar></div>
+<div class="contactUs-container">
+
+  <div class="flexBox-Wrapper">
+  <div class="contactUs-flexBox">
+    <div class="contactUs-box1">
+      <div class="contactUs-heading"><span>Get In Touch</span></div>
+      <div class="contactUs-address-wrapper"></div>
+      <div class="contactUs-address">
+        <div class="contactUs-address-heading"><i  class="fa fa-map-marker"></i>Locate Us</div><span>1324 hidden ridge apt, Irving, TX 75038, United States
+</span></div>
+      <div class="contactUs-info">
+        <div class="contactUs-info-heading"><i class="fa fa-book"></i>Contact Us</div>
+        <div class="contactUs-info-number"><span><i class="fa fa-phone"></i></span><span>+1 (240) 302-8909
+</span></div>
+        <div class="contactUs-info-website"><span><i class="fa fa-star"></i> </span><span>contact@bitcs.in
+</span></div>
+        <div class="contactUs-btnGrp">
+          <div class="contactUs-btnGrp-btn1"><button><i
+            class="fa fa-book"></i>Fill the enquiry form</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="contactUs-box3">
+      <div class="contactUs-form-wrapper">
+        <div class="contactUs-form-wrapper-heading"><span>Contact Us</span></div>
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email </mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Your Message Goes Here..</mat-label>
+        <textarea matInput rows="8"></textarea>
+      </mat-form-field>
+        <button mat-button ><span>Submit</span></button>
+      </div>
+    </div>
+
+
+    <div class="contactUs-box2" *ngIf="toggleShow">
+    <agm-map [latitude]="latitude" [longitude]="longitude">
+
+    </agm-map>
+  </div>
+
+</div>
+  </div></div>
+<app-footer></app-footer>

@@ -1,0 +1,156 @@
+.work-container{
+  background-color: $color-background;
+  padding-bottom: 15rem;
+}
+
+
+.works{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.work-heading{
+  padding: 12rem 0 6rem 0;
+  text-align: center;
+
+  span{
+    font-size: 5rem;
+    color: $color-dark;
+  }
+}
+
+.work{
+  //border: 1px solid rgba(17, 6, 255, 0.31);
+  border-radius: 0.3rem;
+
+  width: 24rem;
+  margin-right: 8rem;
+  &:last-child{
+    margin-right: 0;
+  }
+  &-img{
+    padding-top: 5%;
+    display: block;
+
+    img{
+      width: 22rem;
+      height: 22rem;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.counting{
+  text-align: center;
+}
+.work-text{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8%;
+
+
+  span{
+    font-size: 1.2rem;
+    color: $color-white;
+    background-color: $color-primary;
+    border-radius: 50%;
+    padding: 4% 6%;
+    height: 10%;
+    text-align: left;
+    width: 2%;
+  }
+  &-description{
+    width: 80%;
+    padding-left: 4%;
+    display: inline-block;
+    font-size: 1.9rem;
+    color: $color-dark;
+  }
+
+}
+
+
+
+.sub-works{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.sub-work{
+  width: 24rem;
+  margin-right: 8rem;
+  &:last-child{
+    margin-right: 0;
+  }
+  &-img{
+    display: block;
+    img{
+      width: 22rem;
+      height: 22rem;
+    }
+  }
+}
+
+.sub-work{
+  &-img{
+    display: inline-block;
+    img{
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &-heading{
+    padding-left: 0.8rem;
+
+    display: inline-block;
+    span{
+      position: relative;
+      bottom: 0.6rem;
+      font-size: 2rem;
+      color: $color-dark;
+    }
+  }
+  &-description{
+    padding-top: 2.5rem;
+
+    span{
+      font-size: 1.4rem;
+      font-family: Roboto;
+      color: #948684;
+    }
+  }
+}
+
+
+.work-divider{
+  height:2px;
+  background-color: #f6f6f6;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 500px) {
+  .feature{
+    margin-left: 0;
+  }
+}
+
+
+
+@media (max-width: 1290px){
+  .work{
+      padding-top: 4rem;
+      margin-right: 0;
+
+    }
+  .sub-work{
+    padding-top: 4rem;
+    margin-right: 0;
+    padding-left: 4rem;
+
+  }
+  }
+
