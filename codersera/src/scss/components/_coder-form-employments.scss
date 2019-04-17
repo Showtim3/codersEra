@@ -1,0 +1,94 @@
+.coder-employment-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-bottom: 10rem;
+}
+.employment-form{
+  display: inline-block;
+  width: 63%;
+  border: 2px solid #dbdbdb;
+  margin-top: 3rem;
+  @include matStyle();
+  mat-form-field,mat-checkbox{
+    width: 60%;
+  }
+  h1{
+    text-align: center;
+    border-bottom: 2px solid #dbdbdb;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    span{
+      @include textDecoration();
+      color: $color-dark;
+      font-family: Roboto;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.employmentObject-wrapper{
+  display: inline-block;
+  width:30%;
+  background-color: #f6f6f6;
+  margin-top: 3rem;
+  border:2px solid #dbdbdb;
+  border-left: 0;
+  &-heading{
+    text-align: center;
+    padding: 1rem 0;
+    span{
+      @include textDecoration();
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #636363;
+    }
+    border-bottom: 2px solid #dbdbdb;
+  }
+
+}
+
+
+.input-employment{
+  display: none;
+}
+
+
+.welcome-employment{
+  margin-top: 2rem;
+  padding-bottom: 6rem;
+  display: inline-block;
+
+  position: relative;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  &-arrow{
+    span{
+      i{
+        font-size: 12rem;
+        color: #dbdbdb;
+      }
+    }
+  }
+  &-text{
+    margin-top: 3rem;
+    span{
+      font-size: 2rem;
+      color: $color-dark;
+      @include textDecoration();
+    }
+  }
+}
+
+.mat-checkbox-layout .mat-checkbox-label {
+  line-height: 24px;
+  font-size: 2rem;
+  z-index: 10;
+  @include textDecoration();
+}

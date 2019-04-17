@@ -1,0 +1,165 @@
+<div class="form-skills">
+<form class="coder-skills-form">
+  <h1><span>Skills Form</span></h1>
+  <mat-form-field appearance="outline">
+    <mat-label><span>Enter Your Skills</span></mat-label>
+    <input type="text" placeholder="Java,AngularJs,Python,NodeJs"  matInput [(ngModel)]="skill" [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option (click)="skillSelectedHandler($event)" *ngFor="let option of filteredOptions|async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+
+
+  <div class="object-container object-container-first">
+  <div class="skill-languages">
+  <h1><span>Languages:</span></h1>
+<div *ngFor="let skill of languageObj;let i=index">
+  <div class="skillEntered-container">
+    <div id="languageSkill{{i}}" class="languageSkill">
+      <div class="skill-name-wrapper">
+  <span class="skillEntered-container-name" id="skillName{{i}}">{{skill}} <span> <i (click)="deleteSkill(skill)" class="delete-btn fa fa-remove" ></i></span></span>
+      </div>
+      <div class="skill-inputs">
+  <mat-form-field>
+    <mat-label>Total Experience in {{skill}}</mat-label>
+    <mat-select [ngModel]="defaultVal" >
+      <mat-option *ngFor="let exp of experienceArray" [value]="exp" (focus)="submitHandler(1,i,1,exp)">
+        {{exp}} years
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Projects undertaken in {{skill}}</mat-label>
+    <mat-select [ngModel]="defaultVal" >
+      <mat-option *ngFor="let project of projectsArray" [value]="project"  (focus)="submitHandler(1,i,2,project)">
+        {{project}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+        <div class="tooltip-container" *ngIf="i==0">
+        <span class="question-mark" (mouseenter)="showTooltip()" (mouseleave)="hideTooltip()"><i class="fa fa-question-circle"></i></span>
+        <div class="tooltip" id="tooltip"><span class="tooltip-text">Number of projects you have done using this technology.</span></div>
+        </div>
+        <mat-form-field class="mat-expertise" id="mat-expertise{{i}}">
+          <mat-label>Expertise Level in {{skill}}</mat-label>
+          <mat-select [ngModel]="defaultSkill">
+            <mat-option (click)="setColorLanguage($event,i)" *ngFor="let level of levelArray" [value]="level" (focus)="submitHandler(1,i,3,level)">
+              {{level}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+        <mat-checkbox color="accent" (click)="highlight(1,i)" class="mat-chkbox" id="mat-chkbox{{i}}"><span>Show in profile</span></mat-checkbox>
+
+    </div>
+    </div>
+  </div>
+</div></div>
+
+  </div>
+
+  <div class="object-container">
+  <div class="skill-frameworks">
+    <div style="height:2px;background-color: #dbdbdb;margin-bottom: 3rem"></div>
+
+    <h1><span>Frameworks:</span></h1>
+  <div *ngFor="let skill of frameWorkObj;let j = index">
+    <div class="skillEntered-container">
+      <div id="frameWorkSkill{{j}}" class="languageSkill">
+        <div class="skill-name-wrapper">
+      <span class="skillEntered-container-name" id="frameWorkName{{j}}">{{skill}}  <span> <i (click)="deleteFramework(skill)" class="delete-btn fa fa-remove" ></i></span></span>
+        </div>
+        <div class="skill-inputs">
+          <mat-form-field>
+        <mat-label>Experience in {{skill}}</mat-label>
+        <mat-select [ngModel]="defaultVal">
+          <mat-option *ngFor="let exp of experienceArray" [value]="exp">
+            {{exp}} years
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Projects in {{skill}}</mat-label>
+        <mat-select [ngModel]="defaultVal">
+          <mat-option *ngFor="let project of projectsArray" [value]="project">
+            {{project}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+          <mat-form-field class="mat-expertise" >
+            <mat-label>Expertise Level in {{skill}}</mat-label>
+            <mat-select [ngModel]="defaultSkill" >
+              <mat-option (click)="setColorFramework($event,j)" *ngFor="let level of levelArray" [value]="level">
+                {{level}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      <mat-checkbox (click)="highlight(2,j)" class="mat-chkbox">Show in profile</mat-checkbox>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+
+    <div class="object-container">
+      <div class="skill-others">
+        <div style="height:2px;background-color: #dbdbdb;margin-bottom: 3rem"></div>
+
+        <h1><span>Others:</span></h1>
+  <div *ngFor="let skill of otherObj;let k = index">
+    <div class="skillEntered-container">
+      <div id="otherSkill{{k}}" class="languageSkill">
+        <div class="skill-name-wrapper">
+      <span class="skillEntered-container-name" id="otherName{{k}}">{{skill}}  <span> <i (click)="deleteOther(skill)" class="delete-btn fa fa-remove" ></i></span></span>
+        </div>
+        <div class="skill-inputs">
+      <mat-form-field>
+        <mat-label>Experience in {{skill}}</mat-label>
+        <mat-select [ngModel]="defaultVal">
+          <mat-option *ngFor="let exp of experienceArray" [value]="exp">
+            {{exp}} years
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Projects in {{skill}}</mat-label>
+        <mat-select [ngModel]="defaultVal">
+          <mat-option *ngFor="let project of projectsArray" [value]="project">
+            {{project}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+          <mat-form-field class="mat-expertise">
+            <mat-label>Expertise Level in {{skill}}</mat-label>
+            <mat-select [ngModel]="defaultSkill">
+              <mat-option (click)="setColorOther($event,k)" *ngFor="let level of levelArray" [value]="level">
+                {{level}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      <mat-checkbox (click)="highlight(3,k)" class="mat-chkbox">Show in profile</mat-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  <div class="save-btn-wrapper">
+    <button mat-flat-button class="save-btn" (click)="saveSkills()" >Save Skills</button>
+  </div>
+</div>
+

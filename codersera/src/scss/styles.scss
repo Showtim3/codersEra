@@ -7,6 +7,9 @@
 @import "base/variables";
 @import "base/typography";
 @import "base/mixins";
+@import "base/animations";
+
+@import "toast";
 @import "components/navbar";
 @import "components/card";
 @import "components/header";
@@ -16,6 +19,12 @@
 @import "components/signup-form";
 @import "components/contact-us";
 @import "components/projects";
-@import "base/animations";
+@import "components/resume";
 @import "components/sections-features";
-
+@import "components/coder-form";
+@import "components/coder-forn-skills";
+@import "components/coder-form-projects";
+@import "components/coder-form-experience";
+@import "components/coder-form-education";
+@import "components/coder-form-basic-info";
+@import "components/coder-form-employments";

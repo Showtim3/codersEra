@@ -1,0 +1,128 @@
+
+<div class="resume-navbar"><app-navbar></app-navbar></div>
+
+<ngx-spinner
+  bdOpacity = 1
+  bdColor = "#333"
+  size = "large"
+  color = "#fff"
+  type = "ball-scale-multiple"
+  [fullScreen] = "true"
+>
+  <p style="color: white;font-size:30px" > Polishing Your Resume... </p>
+</ngx-spinner>
+
+<div class="resume-container" >
+
+  <div class="resume-flexBox" *ngIf="showProfile">
+    <div class="resume-box1">
+        <img [src]=resumeObj.imageLink alt="profile pic">
+    </div>
+
+  <div class="resume-box2">
+
+
+
+
+    <div class="resume-box2-name"><span>{{resumeObj.name}}</span></div>
+
+      <span class="resume-box2-expertise"><span>•{{resumeObj.expertise}}</span></span>
+        <span class="resume-box2-location"><span>•{{resumeObj.location}}</span></span>
+      <span class="resume-box2-member"><span>•  {{resumeObj.memberSince}}</span></span>
+
+
+      <div class="resume-box2-introduction"><span>{{resumeObj.introduction}}</span></div>
+
+  </div>
+  <div class="resume-box3">
+    <div class="resume-box3-highlightedSkills"><span class="highlighted-skill{{i+1}}" *ngFor="let skill of resumeObj.highlightedSkills">{{skill}}</span></div>
+  </div>
+  <div class="resume-box4">
+    <div class="resume-box4-skills">
+      <div class="resume-box4-skills-heading"><span>Experience</span></div>
+      <div class="resume-box4-skills-skill" *ngFor="let skill of resumeObj.skills"><span class="resume-box4-skills-skillname">•<span>{{skill.skillName}}</span></span><span class="resume-box4-skills-skillyear">:<span>{{skill.experience}}years</span></span></div>
+    </div>
+      <div class="resume-box4-projects">
+        <div class="resume-box4-projects-heading"><span>Projects</span></div>
+        <div class="resume-box4-project resume-box4-project{{i}}" *ngFor="let project of resumeObj.projects.projects; let i = index" >
+          <div class="resume-box4-project-name"><span>{{project.projectName}}</span></div>
+          <div class="resume-box4-project-toolsUsed"><span>{{project.techUsed}}</span></div>
+        </div>
+
+    </div>
+  </div>
+
+
+    <div class="resume-box5">
+      <div class="resume-box5-employments">
+        <div class="resume-box5-heading"><span>Employments:</span></div>
+        <div class="resume-box5-employment-wrapper">
+        <div class="resume-box5-employments"  *ngFor="let employ of empObj">
+          <div class="resume-box5-employment">
+            <div class="resume-box5-employment-profile"><span>{{employ.profile}}</span></div><div class="resume-box5-employment-year"><span>{{employ.startYear}}-{{employ.endYear}}</span></div>
+          <div class="resume-box5-employment-organisation"><span>{{employ.organisationName}}</span></div>
+
+            <div class="resume-box5-employment-technologies">
+              <ul class="resume-box5-employment-technology" *ngFor="let tech of employ.technologies"><li>{{tech}}</li></ul></div>
+        <div class="resume-box5-employment-details">
+          <ul class="resume-box5-employment-detail" ><li *ngFor="let detail of employ.details">{{detail.detail}}</li>
+          </ul>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="resume-box6">
+      <div class="resume-box6-experiences">
+        <div class="resume-box6-heading">
+          <span>Experience:</span>
+        </div>
+      <div class="resume-box6-experience-wrapper">
+        <div class="resume-box6-experience" *ngFor="let exp of resumeObj.experience.exp">
+        <div class="resume-box6-experience-name"><span>{{exp.expTitle}}</span></div>
+          <div *ngIf="exp.expLink" class="resume-box6-experience-link"><a [href]=exp.expLink> <span>{{exp.expLink}}</span></a></div>
+
+        <div class="resume-box6-experience-description"><span>{{exp.expDescription}}</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="resume-box7">
+      <div class="resume-box7-skillSection">
+        <div class="resume-box7-heading">
+          <span>Skills:</span>
+        </div>
+        <div class="resume-box7-skill-wrapper">
+          <div class="resume-box7-skill" *ngFor="let item of resumeObj.skillSection">
+            <div class="resume-box7-skill-name"><span>{{item.skillType}}</span></div>
+            <ul class="resume-box7-skill-array">
+              <li  *ngFor="let ski of item.skill">{{ski}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resume-box8">
+      <div class="resume-box8-education">
+        <div class="resume-box8-heading">
+          <span>Education:</span>
+        </div>
+        <div class="resume-box8-education-wrapper">
+          <div class="resume-box8-education" *ngFor="let edu of resumeObj.education.education">
+            <div class="resume-box8-courseName"><span>{{edu.degree}}</span></div>
+            <div class="resume-box8-university">
+              <span>{{edu.university}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

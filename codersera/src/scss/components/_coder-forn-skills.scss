@@ -1,0 +1,173 @@
+.form-skills{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-bottom: 10rem;
+}
+.coder-skills-form{
+  text-align: center;
+  border: 2px solid #dbdbdb;
+  width: 80%;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  mat-label{
+    span {
+      font-size: 2.1rem;
+    }
+  padding-bottom: 1rem;
+  }
+  .mat-form-field-infix{
+    padding: 1.3rem 0;
+
+  }
+  input.mat-input-element, textarea{
+    font-size: 1.8rem;
+  }
+  mat-form-field{
+    width: 40%;
+  }
+  h1{
+    text-align: center;
+    border-bottom: 2px solid #dbdbdb;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    span{
+      @include textDecoration();
+      color: $color-dark;
+      font-family: Roboto;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+.skillEntered-container{
+width: 100%;
+    &-name{
+
+    @include textDecoration();
+    font-size: 1.8rem;
+      color:$color-white;
+      padding: 0.8rem 1.6rem;
+    background-color: #568dee;
+    border-radius: 5.3rem;
+    font-family: Roboto;
+
+      span{
+        cursor: pointer;
+        background: #002e5c;
+        font-size: 1.6rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 50%;
+        margin-bottom: 0.2rem;
+        i{
+
+        }
+      }
+  }
+  mat-form-field{
+    width: 20%;
+    padding: 1rem 2rem;
+  }
+  mat-label{
+    font-size: 2rem;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-infix {
+    /* padding: 0.6rem; */
+    padding-top: 10px;
+  }
+}
+#mat-expertise0{
+  margin-left: 1%;
+}
+.mat-expertise{
+  margin-left: 3%;
+}
+.mat-chkbox{
+ // margin-left:7%;
+  span{
+  font-size: 1.6rem;
+}
+}
+
+.skill-highlight{
+  border: 2px solid $color-dark !important;
+}
+
+
+.skill-name-wrapper{
+  display: inline-block;
+  position: relative;
+  top:2rem;
+  text-align: left;
+  z-index: 10;
+  padding-bottom: 1.6rem;
+}
+.skill-inputs{
+
+  display: inline-block;
+  width: 81%;
+  text-align: left;
+  margin: 0 0 0 auto;
+
+}
+
+
+.object-container{
+  &-first{
+    padding-top: 4rem;
+  }
+  padding: 2rem;
+  display: inline-block;
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.question-mark{
+
+  i{
+    color: rgba(80, 84, 80, 0.69);
+    font-size: 2rem;
+  }
+
+}
+.tooltip-container{
+  display: inline-block;
+}
+.tooltip{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.63);
+  padding: 1rem 0.8rem;
+  left: 40%;
+  top:3rem;
+
+  display: none;
+  span{
+    font-size: 1.6rem;
+    color:white;
+  }
+}
+
+.languageSkill{
+  text-align: center;
+  position: relative;
+  left:7%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+
+}
+.skill-languages , .skill-frameworks,.skill-others{
+
+  h1{
+    span{
+      @include lightHeading();
+      font-size:2.4rem;
+    }
+  }
+}

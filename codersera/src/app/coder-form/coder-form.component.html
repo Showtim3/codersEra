@@ -1,0 +1,163 @@
+<div class="coder-form-navbar"><app-navbar></app-navbar></div>
+
+<div class="coder-form-container">
+  <div class="coder-form-flexBox">
+    <div class="coder-box1">
+      <div class="coder-box1-fields-wrapper">
+        <div class="coder-box1-fields" id="coder-box1-field{{i}}" (click)="fieldClickHandler(i)" *ngFor="let field of fields;let i = index">
+          <div class="coder-box1-field">
+
+            <span class="coder-box1-count"><span>{{i+1}}</span></span>
+            <span class="coder-box1-fieldName"><span>{{field}}</span></span>
+          </div>
+        </div>
+        <app-preview-profile></app-preview-profile>
+      </div>
+    </div>
+    <div class="coder-box2">
+
+      <div class="coder-box2-item1" *ngIf="showField[0]">
+        <div class="coder-box2-item-panel"><span>{{fields[0]}}</span></div>
+
+          <app-basic-info></app-basic-info>
+        </div>
+
+
+
+      <div class="coder-box2-item2" *ngIf="showField[1]">
+        <div class="coder-box2-item-panel"><span>{{fields[1]}}</span></div>
+        <div class="coder-box2-item-form coder-box2-item2-form">
+          <div class="coder-form-row">
+            <app-skills></app-skills>
+          </div>
+        </div>
+      </div>
+      <div class="coder-box2-item3" *ngIf="showField[2]">
+      <div class="coder-box2-item-panel"><span>{{fields[2]}}</span></div>
+      <div class="coder-box2-item3-form coder-box2-item-form">
+        <div class="coder-form-row">
+
+          <app-form-project></app-form-project>
+        </div>
+
+
+      </div>
+    </div>
+
+      <div class="coder-box2-item4" *ngIf="showField[3]">
+        <div class="coder-box2-item-panel"><span>{{fields[3]}}</span></div>
+        <div class="coder-box2-item5-data-container">
+              <div class="emp-form">
+            <form [formGroup]="coderForm">
+              <div  class="coder-box2-item5-form coder-box2-item-form">
+                <div formArrayName="employments" class="coder-form-row">
+
+                  <div  *ngFor="let emp of coderForm.get('employments').controls;let i = index">
+                    <div class="emp-form-wrapper" [formGroupName]="i">
+                      <h1><span>Employment Form</span></h1>
+                      <div class="welcome-employment" [style.display]="showInputBool? 'none' :'block'" id="welcome-employment-block">
+                        <div class="welcome-employment-arrow"><span><i class="fa fa-arrow-right"></i></span></div>
+                        <div class="welcome-employment-text"><span>Here you can tell about all the employment you acquired.</span></div>
+                      </div>
+                       <div class="input-employment" [style.display]="showInputBool? 'block' :'none' "  id="input-employment-block">
+                      <mat-form-field appearance="outline">
+                      <mat-label><span>Employment Profile:</span></mat-label>
+                      <input  (click)="addFieldOnEnter=false" formControlName="profile" matInput placeholder="Senior Engineer, Lead Analyst..">
+                    </mat-form-field >
+                    <mat-form-field appearance="outline">
+                      <mat-label><span>Organisation Name:</span></mat-label>
+                      <input  (click)="addFieldOnEnter=false" formControlName="organisationName" matInput placeholder="Name of the company">
+                    </mat-form-field>
+
+                      <mat-form-field appearance="outline">
+                        <mat-label><span>Start Year:</span></mat-label>
+                        <input (click)="addFieldOnEnter=false" formControlName="startYear" type="number" matInput placeholder="2013">
+                      </mat-form-field>
+                      <mat-checkbox color="accent" id="currentlyWorking" (click)="disableEndYear()">Currently Working</mat-checkbox>
+
+                      <mat-form-field appearance="outline">
+                        <mat-label><span>End Year:</span></mat-label>
+                        <input [attr.disabled]="currentlyWorking" (click)="addFieldOnEnter=false" formControlName="endYear" type="number" matInput placeholder="2017">
+                      </mat-form-field>
+
+                          <mat-form-field appearance="outline">
+                            <mat-label><span>Technology Used:</span></mat-label>
+                            <input (click)="addFieldOnEnter=false" formControlName="technologies" matInput placeholder="Java,Python,C++,Javascript">
+                          </mat-form-field>
+
+
+                    <div class="item5-details-container" formArrayName="details">
+                      <div *ngFor="let detail of getDetails(coderForm,i);let j = index;" >
+                        <div [formGroupName]="j">
+                          <mat-form-field appearance="outline" (click)="addFieldOnEnter=true" >
+                            <mat-label><span>Description:</span></mat-label>
+                            <input  (focus)="addFieldOnEnter=true" formControlName="detail" matInput placeholder="List of the tasks you accomplished or assisted..Press Enter to add a new field" >
+                          </mat-form-field>
+                          <div class="remove-details-wrapper" *ngIf="j>0">
+                            <span (click)="removeEmploymentDetails(i,j)"><i class="delete-btn fa fa-remove" ></i></span>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                      <div class="save-btn-wrapper">
+                        <button mat-flat-button class="save-btn" type="button" (click)="saveEmployment()" >Save Employment</button>
+                      </div>
+                      <button style="visibility: hidden" [attr.type]="toggleAddField()" mat-mini-fab color="primary" class="add-btn" (click)="addEmploymentDetails(i)"><i class="fa fa-plus"></i></button>
+
+                    </div>
+                      </div>
+                  </div>
+                </div>
+                </div>
+
+            </form>
+              </div>
+
+              <div class="empData-container">
+                <div class="empData-container-heading"><span>Your Organisations</span></div>
+
+          <div (click)="populateData(ind)" class="empData" *ngFor="let data of employmentObj;let ind = index">
+            <div class="empData-name">
+              <div class="empData-name-first"><span class="empData-name-index"><span>{{ind+1}}</span></span><span class="empData-name-organisation"><span>{{data[0].organisationName}}</span></span></div>
+              <div class="empData-name-second"><span> <i (click)="deleteEmployment(data[0].organisationName,data[0].startYear)" class="delete-btn fa fa-remove" ></i></span></div>
+            </div>
+
+
+
+            <div class="empData-year"><span>{{data[0].startYear}}-{{data[0].endYear}}</span></div>
+
+              </div>
+
+                <div class="add-new-btn-wrapper">
+                  <button mat-flat-button class="add-new-btn" (click)="addEmploymentHandler()" >Add New Employment</button>
+                </div>
+        </div>
+        </div>
+    </div>
+
+      <div class="coder-box2-item5" *ngIf="showField[4]">
+        <div class="coder-box2-item-panel"><span>{{fields[4]}}</span></div>
+        <div class="coder-box2-item3-form coder-box2-item-form">
+          <div class="coder-form-row">
+
+            <app-experience></app-experience>
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <div class="coder-box2-item6" *ngIf="showField[5]">
+        <div class="coder-box2-item-panel"><span>{{fields[5]}}</span></div>
+        <app-education></app-education>
+      </div>
+
+
+  </div>
+</div>
+  {{coderForm.value|json}}
+</div>
+
+<app-footer></app-footer>

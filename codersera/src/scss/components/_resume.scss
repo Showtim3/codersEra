@@ -1,0 +1,631 @@
+.resume-navbar{
+  @include navbarExternal();
+}
+.resume-container{
+  background-color: $color-light;
+  padding-top: 15rem;
+  padding-bottom:6rem;
+  min-height: 100vh;
+}
+
+.resume-flexBox{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  background-color: $color-white;
+  padding: 4%;
+  font-family: Nunito;
+}
+
+.resume-box1{
+  order:2;
+  img{
+
+    height: 25rem;
+    width: 100%;
+  }
+  width: 22%;
+
+}
+
+.resume-box2{
+
+  width: 76%;
+  padding-left: 2%;
+  order:1;
+  &-name{
+    span{
+      font-size:4rem;
+      font-family: Rubik;
+      color: $color-dark;
+    }
+    padding-bottom: 1.5rem;
+  }
+  &-expertise{
+
+    span{
+      font-weight: bold;
+      color: rgba(52, 68, 74, 0.83);
+      font-size: 1.8rem;
+      font-family: Rubik;
+    }
+  }
+  &-location{
+    padding-top: 0.5rem;
+    span{
+      font-weight: bold;
+      padding-left: 4rem;
+      color: rgba(52, 68, 74, 0.83);
+      font-size: 1.8rem;
+      font-family: Rubik;
+    }
+  }
+  &-member{
+    padding-top: 0.5rem;
+    span{
+      font-weight: bold;
+      padding-left: 4rem;
+      color: rgba(52, 68, 74, 0.83);
+      font-size: 1.8rem;
+      font-family: Rubik;
+    }
+  }
+  &-introduction{
+    padding-top: 3rem;
+    span{
+      color: rgba(52, 68, 74, 0.83);
+      font-size: 1.8rem;
+      font-family: Rubik;
+      @include textDecoration();
+    }
+  }
+}
+
+.resume-box3{
+  order:3;
+  border-top:1px solid rgba(52, 68, 74, 0.38);
+  border-bottom:1px solid rgba(52, 68, 74, 0.38);
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  &-highlightedSkills{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    span{
+      border-radius: 2px;
+      background-color: $color-dark;
+      margin: 0.8rem;
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+      color: $color-white;
+      font-family: Rubik;
+    }
+
+  }
+}
+
+.resume-box4{
+  width: 100%;
+  order:4;
+  justify-content: space-evenly;
+
+  padding-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  &-skills{
+    display: inline-block;
+    order:2;
+
+    &-heading{
+      span{
+        color: rgba(52, 68, 74, 0.83);
+        font-size: 2.2rem;
+        font-family: Rubik;
+      }
+      padding-bottom: 1rem;
+    }
+    &-skill{
+      padding: 1rem 0;
+      span{
+        font-family: Rubik;
+        font-size: 2.2rem;
+        color: $color-dark;
+      }
+    }
+    &-skillname{
+      span{
+        font-family: Rubik;
+        font-size: 2rem;
+      }
+    }
+    &-skillyear{
+
+      span{
+        padding-left: 0.4rem;
+        font-size: 1.8rem;
+        font-family: Rubik;
+        color: rgba(52, 68, 74, 0.83);
+      }
+    }
+
+  }
+  &-projects{
+    display: inline-block;
+
+    order: 1;
+    padding-right: 12%;
+     border-right:1px solid rgba(52, 68, 74, 0.38);
+    &-heading{
+
+      span{
+        font-family: Rubik;
+        color: rgba(52, 68, 74, 0.83);
+        font-size: 2.2rem;
+      }
+      padding-bottom: 2rem;
+    }
+  }
+  &-project{
+
+    padding-bottom: 3rem;
+    &-name{
+      span{
+        font-family: Rubik;
+        font-size: 2rem;
+        color: $color-dark;
+      }
+    }
+    &-toolsUsed{
+      span{
+        font-family: Rubik;
+        font-size: 1.6rem;
+        color: rgba(52, 68, 74, 0.83);
+
+      }
+    }
+  }
+}
+
+.resume-box5{
+  order:5;
+  width: 100%;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top:1px solid rgba(52, 68, 74, 0.38);
+  &-heading{
+    span{
+      font-family: Rubik;
+      font-size: 2.2rem;
+
+      @include textDecoration();
+      color: rgba(52, 68, 74, 0.83);
+    }
+  }
+  &-employment-wrapper{
+    width: 100%;
+    position: relative;
+    left:20%;
+    top:-2.6rem;
+    display: inline-block;
+
+  }
+  &-employment {
+
+
+    &-profile{
+      width:60%;
+      display: inline-block;
+      span{
+        @include textDecoration();
+        font-family: Rubik;
+        font-size: 2.4rem;
+        color:$color-dark;
+      }
+    }
+    &-year{
+      text-align: right;
+      width: 20%;
+      display: inline-block;
+      span{
+        @include textDecoration();
+        font-family: Rubik;
+        font-size:1.9rem;
+        color: rgba(52, 68, 74, 0.83);
+
+      }
+    }
+    &-organisation{
+      padding-top: 0.2rem;
+      padding-bottom: 0.4rem;
+      span{
+        font-family: Rubik;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &-employment-details{
+    display: inline-block;
+    width: 80%;
+    padding-top: 1rem;
+    ul{padding-left: 2%;}
+    li{
+
+      @include textDecoration();
+      font-family: Rubik;
+      font-size: 1.8rem;
+      color: rgba(52, 68, 74, 0.83);
+
+    }
+  }
+  &-employment-technologies{
+    padding-left: 2%;
+    ul{
+      display: inline-block;
+      margin-left:-0.4rem;
+    }
+  }
+  &-employment-technology{
+
+    li{
+      @include textDecoration();
+      font-family: Rubik;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding-right: 4rem;
+      color: rgba(52, 68, 74, 0.83);
+    }
+  }
+
+  &-employments{
+    padding-bottom: 8rem;
+    &:last-child{
+      padding-bottom: 2rem;
+    }
+
+  }
+}
+
+.resume-box6{
+  order: 6;
+  border-top:1px solid rgba(52, 68, 74, 0.38);
+  border-bottom:1px solid rgba(52, 68, 74, 0.38);
+  padding-top: 4rem;
+  &-heading{
+    span{
+      font-family: Rubik;
+      font-size: 2.2rem;
+      @include textDecoration();
+      color: rgba(52, 68, 74, 0.83);
+    }
+  }
+  &-experience{
+    padding-bottom: 4rem;
+    &:last-child{
+      padding-bottom: 4rem;
+    }
+  }
+  &-experience-wrapper{
+    width: 90%;
+    position: relative;
+    left:20%;
+    top:-2.6rem;
+    display: inline-block;
+
+  }
+
+  &-experience-name{
+
+    span{
+      @include textDecoration();
+      font-family: Rubik;
+      font-size: 2.4rem;
+      color:$color-dark;
+    }
+  }
+
+  &-experience-link{
+  padding-top: 0.5rem;
+    a{
+      text-decoration: none;
+    }
+    span{
+      font-family: Rubik;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 1.8rem;
+    }
+  }
+  &-experience-description{
+    padding-top: 0.5rem;
+width: 90%;
+    span{
+      @include textDecoration();
+      font-family: Rubik;
+      font-size:1.5rem;
+      color: rgba(52, 68, 74, 0.83);
+
+    }
+  }
+}
+
+.resume-box7{
+  order: 7;
+  width: 100%;
+  border-bottom:1px solid rgba(52, 68, 74, 0.38);
+  padding-top: 4rem;
+  &-heading{
+    span{
+      font-family: Rubik;
+      font-size: 2.2rem;
+      @include textDecoration();
+      color: rgba(52, 68, 74, 0.83);
+    }
+  }
+  &-skill{
+    padding-bottom: 4rem;
+    &:last-child{
+      padding-bottom: 2rem;
+    }
+
+    ul{
+      margin-left: 2rem;
+      /* width: 105%; */
+      /* display: inline-flex; */
+      display: flex;
+      justify-content: normal;
+      flex-wrap: wrap;
+
+    }
+  }
+
+  &-skill-array{
+    padding-top: 0.5rem;
+    width: 90%;
+    li{
+      @include textDecoration();
+      padding-right: 4rem;
+      font-family: Rubik;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 1.8rem;
+
+    }
+  }
+  &-skill-wrapper{
+    width: 90%;
+    position: relative;
+    left:20%;
+    top:-2.6rem;
+    display: inline-block;
+
+  }
+
+  &-skill-name{
+
+    span{
+      @include textDecoration();
+      font-family: Rubik;
+      font-size: 2.4rem;
+      color:$color-dark;
+    }
+  }
+
+}
+
+.resume-box8{
+  order: 8;
+  width: 100%;
+  border-bottom:1px solid rgba(52, 68, 74, 0.38);
+  padding-top: 4rem;
+  &-heading{
+    span{
+      font-family: Rubik;
+      font-size: 2.2rem;
+      @include textDecoration();
+      color: rgba(52, 68, 74, 0.83);
+    }
+  }
+  &-education{
+    padding-bottom: 4rem;
+    &:last-child{
+      padding-bottom: 2rem;
+    }
+  }
+  &-education-wrapper{
+    width: 90%;
+    position: relative;
+    left:20%;
+    top:-2.6rem;
+    display: inline-block;
+
+  }
+
+  &-courseName{
+    span{
+      @include textDecoration();
+      font-family: Rubik;
+      font-size: 2.4rem;
+      color:$color-dark;
+    }
+  }
+  &-university{
+  padding-top: 0.5rem;
+    width: 90%;
+    span{
+
+      @include textDecoration();
+      padding-right: 1rem;
+      font-family: Rubik;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 1550px){
+  .resume-box5-employment-wrapper{
+
+  }
+  .resume-box6-experience-wrapper{
+
+  }
+}
+
+@media (max-width: 1200px) {
+  .resume-flexBox{
+    width: 90%;
+  }
+}
+
+@media (max-width: 960px) {
+  .resume-flexBox{
+    width: 90%;
+  }
+}
+@media (max-width: 770px) and (min-width: 750px) {
+  .resume-box5-employment-wrapper{
+
+    left:23%;
+  }
+  .resume-box5-employment-technologies{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .resume-box5-employments{
+    display: inline-block;
+  }
+}
+@media (max-width: 750px) {
+  .resume-box1 {
+    width: 80%;
+    order: 1;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .resume-box2 {
+    width: 100%;
+    order: 1;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .resume-box2 {
+
+    &-expertise {
+      display: block;
+      padding-left: 0;
+    }
+
+    &-location {
+     display: block;
+      padding-left: 0;
+      span{
+        padding-left: 0;
+      }
+    }
+
+    &-member {
+      display: block;
+      padding-left: 0;
+      span{
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  .resume-box4{
+    &-skills{
+      padding-top: 4rem;
+      width: 100%;
+    }
+    &-projects{
+      width: 100%;
+      padding-right: 0;
+      border-right: 0;
+      border-bottom: 1px solid rgba(52, 68, 74, 0.38);
+      padding-bottom: 4rem;
+    }
+  }
+
+  .resume-box5{
+    &-employments{
+      padding-bottom: 5rem;
+    }
+    &-employment-details{
+      display: block;
+      width: 100%;
+    }
+    &-employment-wrapper{
+      top:1rem;
+      left: 0;
+    }
+    &-employment-profile{
+      span{
+        font-size: 2rem;
+      }
+    }
+    &-employment-year{
+      width: 40%;
+      span{
+        font-size: 2rem;
+      }
+    }
+
+  &-employment-organisation{
+    padding: 1rem 0;
+  }
+    &-employment-technologies{
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+
+
+.resume-box6{
+  &-experience-wrapper{
+    top:1rem;
+    left: 0;
+  }
+  &-experience-name{
+    span{
+      font-size: 2rem;
+    }
+  }
+}
+
+
+.resume-box7{
+  &-skill-wrapper{
+    top:1rem;
+    left: 0;
+  }
+  &-skill-name{
+    span{
+      font-size: 2rem;
+    }
+  }
+}
+
+.resume-box8{
+  &-education-wrapper{
+    top:1rem;
+    left: 0;
+  }
+  &-courseName{
+    span{
+      font-size: 2rem;
+    }
+  }
+}
+}

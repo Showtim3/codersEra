@@ -1,0 +1,31 @@
+
+<div class="coder-information-wrapper">
+
+  <div class="information-form">
+    {{resumeModel|async}}
+    <h1><span>Basic Information Form</span></h1>
+    <mat-form-field appearance="outline">
+      <mat-label><span>Name</span></mat-label>
+      <input matInput [(ngModel)]="name" id="name-basicInfo" type="text">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label><span>Profile</span></mat-label>
+      <input  [(ngModel)]="expertise" matInput  id="profile-basicInfo" type="text">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label><span>Location</span></mat-label>
+        <input [(ngModel)]="location" matInput type="text" id="location-basicInfo">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label><span>Brief Introduction</span></mat-label>
+        <textarea matInput type="text" [(ngModel)]="introduction" id="introduction-basicInfo" rows="6" ></textarea>
+      </mat-form-field>
+
+    <div class="save-btn-wrapper">
+      <button mat-flat-button class="save-btn" (click)="saveInformation()" >Save Information</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+
+<div class="coder-experience-wrapper">
+<div class="experience-form">
+  <h1><span>Experience Form</span></h1>
+  <div class="welcome-experience" id="welcome-experience-block">
+    <div class="welcome-experience-arrow"><span><i class="fa fa-arrow-right"></i></span></div>
+    <div class="welcome-experience-text"><span>Here you can tell about all the experience you acquired.</span></div>
+  </div>
+
+  <div class="input-experience" id="input-experience-block">
+
+  <mat-form-field appearance="outline">
+    <mat-label><span>Title*</span></mat-label>
+    <input type="text" matInput [(ngModel)]="expTitle" placeholder="Experience Title" id="title-experience">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label><span>URL</span></mat-label>
+    <input type="text" matInput [(ngModel)]="expLink" placeholder="Leave blank if not present" id="link-experience">
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label><span>Description*</span></mat-label>
+    <textarea type="text" matInput [(ngModel)]="expDescription" placeholder="A brief description what the experience was about" rows="4" id="description-experience"></textarea>
+  </mat-form-field>
+
+  <div class="save-btn-wrapper">
+    <button mat-flat-button class="save-btn" (click)="saveExperienceHandler()" >Save Experience</button>
+  </div>
+</div>
+
+</div>
+
+
+<div class="expObj-wrapper">
+  <div class="expObj-wrapper-heading"><span>Your Experiences</span></div>
+  <div *ngFor="let exp of experienceObject;let ind = index" >
+    <div class="empData">
+      <div class="empData-name" (click)="populateExperience(ind)">
+        <div class="empData-name-first"><span class="empData-name-index"><span>{{ind+1}}</span></span><span class="empData-name-organisation"><span>{{exp.expTitle}}</span></span></div>
+        <div class="empData-name-second"><span> <i (click)="deleteProject(ind)" class="delete-btn fa fa-remove" ></i></span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="add-new-btn-wrapper">
+    <button mat-flat-button class="add-new-btn" (click)="addExperienceHandler()" >Add New Experience</button>
+  </div>
+</div>
+
+</div>

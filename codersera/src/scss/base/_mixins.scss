@@ -17,3 +17,45 @@
   z-index: 100;
   width: 100%;
 }
+@mixin lightHeading{
+  font-family: Rubik;
+  font-weight: normal;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  word-spacing: 0.6rem;
+  color: rgba(52, 68, 74, 0.83);
+}
+
+@mixin textDecoration{
+  line-height: 2.4rem;
+  word-spacing: 0.6rem;
+}
+
+@mixin matStyle{
+    input.mat-input-element, textarea{
+      font-size: 1.8rem;
+    }
+
+  mat-form-field ,mat-checkbox{
+
+    display: inline-block;
+    position: relative;
+
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+    mat-label{
+      span {
+        font-size: 2.1rem;
+      }
+      padding-bottom: 1rem;
+
+    }
+
+    .mat-form-field-infix{
+      padding: 1.3rem 0;
+
+    }
+  }
+
+}

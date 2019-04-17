@@ -1,0 +1,47 @@
+<div class="coder-education-wrapper">
+
+<div class="education-form">
+  <h1><span>Education Form</span></h1>
+  <div class="welcome-education" id="welcome-education-block">
+    <div class="welcome-education-arrow"><span><i class="fa fa-arrow-right"></i></span></div>
+    <div class="welcome-education-text"><span>Here You Can Tell Us about the education you received.</span></div>
+  </div>
+
+  <div class="input-education" id="input-education-block">
+
+  <mat-form-field appearance="outline">
+    <mat-label><span>Degree*</span></mat-label>
+    <input matInput type="text"  [(ngModel)]="degree" id="degree-education" placeholder="Bachelor's degree in computer science">
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label><span>University Name*</span></mat-label>
+    <input matInput type="text" [(ngModel)]="university" id="university-education" placeholder="XYZ university of california">
+  </mat-form-field>
+
+    <div class="save-btn-wrapper">
+      <button mat-flat-button class="save-btn" (click)="saveEducationHandler()" >Save Education</button>
+    </div>
+</div>
+
+</div>
+<div class="educationObject-wrapper">
+  <div class="educationObject-wrapper-heading"><span>Your Education</span></div>
+
+  <div class="" *ngFor="let education of educationObject;let ind = index" >
+    <div class="empData">
+      <div class="empData-name" (click)="populateEducation(ind)">
+        <div class="empData-name-first"><span class="empData-name-index"><span>{{ind+1}}</span></span><span class="empData-name-organisation"><span>{{education.degree}}</span></span></div>
+        <div class="empData-name-second"><span> <i (click)="removeEducationHandler(ind)" class="delete-btn fa fa-remove" ></i></span></div>
+      </div>
+
+      <div class="empData-year"><span>{{education.university}}</span></div>
+    </div>
+  </div>
+
+  <div class="add-new-btn-wrapper">
+    <button mat-flat-button class="add-new-btn" (click)="addEducationHandler()" >Add New Education</button>
+  </div>
+</div>
+</div>

@@ -1,0 +1,69 @@
+<div class="coder-project-wrapper">
+
+<div class="form-project">
+
+  <h1><span>Project Form</span></h1>
+
+  <div class="welcome-project" id="welcome-project-block">
+    <div class="welcome-project-arrow"><span><i class="fa fa-arrow-right"></i></span></div>
+    <div class="welcome-project-text"><span>Here you can tell about all the amazing projects you have done.</span></div>
+  </div>
+  <div class="input-project" id="input-project-block">
+
+  <mat-form-field appearance="outline">
+    <mat-label>
+      <span>Project Name*</span>
+    </mat-label>
+    <input matInput type="text" [(ngModel)]="projectName" placeholder="Shopping Website" id="projectName-project">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>
+      <span>Description*</span>
+    </mat-label>
+    <input matInput type="text" [(ngModel)]="description" placeholder="A brief description of the project" id="description-project">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>
+      <span>URL</span>
+    </mat-label>
+    <input matInput type="url" [(ngModel)]="link" placeholder="Leave blank if not present" id="url-project">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>
+      <span>Technologies Used*</span>
+    </mat-label>
+    <input matInput type="text" [(ngModel)]="techUsed" placeholder="Javascript, Bootstrap etc" id="techUsed-project">
+  </mat-form-field>
+
+
+
+  <div class="save-btn-wrapper">
+    <button mat-flat-button class="save-btn" (click)="saveProjectHandler()" >Save Project</button>
+  </div>
+  </div>
+</div>
+
+<div class="projectsObj-wrapper">
+  <div class="projectsObj-wrapper-heading"><span>Your Projects</span></div>
+
+  <div *ngFor="let project of projectObj;let ind = index" >
+<div class="empData">
+  <div class="empData-name" (click)="populateProject(ind)">
+    <div class="empData-name-first"><span class="empData-name-index"><span>{{ind+1}}</span></span><span class="empData-name-organisation"><span>{{project.projectName}}</span></span></div>
+    <div class="empData-name-second"><span> <i (click)="deleteProject(ind)" class="delete-btn fa fa-remove" ></i></span></div>
+  </div>
+
+
+
+  <div class="empData-year empData-year-project"><span>{{project.techUsed}}</span></div>
+  </div>
+  </div>
+  <div class="add-new-btn-wrapper">
+    <button mat-flat-button class="add-new-btn" (click)="addProjectHandler()" >Add New Project</button>
+  </div>
+</div>
+
+</div>
